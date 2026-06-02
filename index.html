@@ -233,6 +233,68 @@
   }
   .detail-val { font-size: 0.9rem; color: var(--text); line-height: 1.5; }
 
+  /* EXPERIENCE */
+  .exp-list {
+    display: flex; flex-direction: column;
+    gap: 1px; background: var(--border);
+    border: 0.5px solid var(--border);
+  }
+  .exp-item {
+    background: var(--bg);
+    padding: 2.25rem 2.5rem;
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 2rem; align-items: start;
+    transition: background 0.2s;
+  }
+  .exp-item:hover { background: var(--bg3); }
+  .exp-header {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 0.4rem; flex-wrap: wrap;
+  }
+  .exp-role {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .exp-badge {
+    font-family: 'DM Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    background: rgba(90,255,200,0.08);
+    border: 0.5px solid rgba(90,255,200,0.25);
+    color: var(--accent2);
+  }
+  .exp-company {
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    color: var(--accent3); letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+  .exp-desc { font-size: 0.88rem; color: var(--muted); max-width: 600px; line-height: 1.7; }
+  .exp-highlights {
+    margin: 14px 0 0; padding: 0; list-style: none;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .exp-highlights li {
+    color: var(--muted); font-size: 12px; line-height: 1.7;
+    padding-left: 16px; position: relative;
+  }
+  .exp-highlights li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--accent); font-size: 10px;
+  }
+  .exp-meta {
+    text-align: right;
+  }
+  .exp-date {
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    color: var(--muted); letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .exp-location {
+    font-family: 'DM Mono', monospace; font-size: 0.65rem;
+    color: var(--muted); margin-top: 0.3rem;
+    opacity: 0.6;
+  }
+
   /* SKILLS */
   .skills-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
@@ -419,6 +481,8 @@
     .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .skills-grid { grid-template-columns: 1fr; }
     .certs-grid { grid-template-columns: 1fr; }
+    .exp-item { grid-template-columns: 1fr; }
+    .exp-meta { text-align: left; }
   }
 </style>
 </head>
@@ -429,6 +493,7 @@
   <div class="nav-logo">VR</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#certs">Certifications</a></li>
@@ -506,9 +571,36 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">02 — Experience</div>
+  <h2 class="section-title">Where I've worked</h2>
+  <div class="exp-list">
+    <div class="exp-item">
+      <div>
+        <div class="exp-header">
+          <div class="exp-role">AI/ML Intern</div>
+          <div class="exp-badge">Current</div>
+        </div>
+        <div class="exp-company">ACT Fibernet (Atria Convergence Technologies) · Bengaluru, Karnataka</div>
+        <p class="exp-desc">Working on agentic AI systems and intelligent automation pipelines for one of India's largest fibre broadband providers.</p>
+        <ul class="exp-highlights">
+          <li>Selected for an AI/ML internship focusing on agentic AI systems and intelligent automation pipelines.</li>
+          <li>Designing and deploying autonomous AI agents for network monitoring and operational decision-making, leveraging LLM-based reasoning and tool-use frameworks.</li>
+          <li>Integrating multi-step agentic workflows with internal APIs and data sources to automate diagnostics, anomaly detection, and customer-facing resolution processes.</li>
+        </ul>
+      </div>
+      <div class="exp-meta">
+        <div class="exp-date">Jun 2026 — Aug 2026</div>
+        <div class="exp-location">Bengaluru, India</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SKILLS -->
 <section id="skills">
-  <div class="section-label">02 — Skills</div>
+  <div class="section-label">03 — Skills</div>
   <h2 class="section-title">What I work with</h2>
   <div class="skills-grid">
     <div class="skill-card">
@@ -550,7 +642,7 @@
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-label">03 — Projects</div>
+  <div class="section-label">04 — Projects</div>
   <h2 class="section-title">Selected work</h2>
   <div class="projects-list">
     <div class="project-item">
@@ -678,7 +770,7 @@
 
 <!-- CERTIFICATIONS -->
 <section id="certs">
-  <div class="section-label">04 — Certifications</div>
+  <div class="section-label">05 — Certifications</div>
   <h2 class="section-title">Credentials</h2>
   <div class="certs-grid">
     <div class="cert-item">
@@ -717,7 +809,7 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label">05 — Contact</div>
+  <div class="section-label">06 — Contact</div>
   <div class="contact-inner">
     <div>
       <div class="contact-big">
